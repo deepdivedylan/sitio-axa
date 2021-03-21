@@ -6,7 +6,7 @@ services:
     environment:
       - VIRTUAL_HOST=suagentedeseguros.com,www.suagentedeseguros.com
     volumes:
-      - ./php/-site.ini:/usr/local/etc/php/conf.d/axa-site.ini
+      - ./php/axa-site.ini:/usr/local/etc/php/conf.d/axa-site.ini
       - ./volumes/html:/var/www/html
   mysql:
     image: mysql:5.7
