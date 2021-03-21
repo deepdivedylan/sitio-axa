@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  -site:
+    image: wordpress:latest
+    environment:
+      - VIRTUAL_HOST=suagentedeseguros.com,www.suagentedeseguros.com
+    volumes:
+      - ./php/-site.ini:/usr/local/etc/php/conf.d/axa-site.ini
+      - ./volumes/html:/var/www/html
+  mysql:
+    image: mysql:5.7
+    env_file:
+      - ./.gitsecret/secrets/axa-site.env
+    volumes:
+      - ./volumes/mysql:/var/lib/mysql
