@@ -2,4 +2,4 @@
 .DS_Store
 /volumes
 /.gitsecret/keys/random_seed
-/.gitsecret/secrets/vsi-site.env
+/.gitsecret/secrets/axa-site.env
